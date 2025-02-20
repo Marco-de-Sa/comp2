@@ -1,17 +1,15 @@
 from random import randint
 #
 def first_prisoner(prisoners):
-    evenorodd = 0
+    hatcount = 0
     prisoner_pos = len(prisoners)-1
     print(f"{prisoner_pos} first")
 
     for i in range(0, prisoner_pos):
         if prisoners[i] == 1:
-            evenorodd += 1
-    if evenorodd % 2 == 0:
-        prisoner_guess(prisoners, 1, prisoner_pos+1)
-    else:
-        prisoner_guess(prisoners, 0, prisoner_pos+1)
+            hatcount += 1
+
+    prisoner_guess(prisoners, hatcount, prisoner_pos+1)
 #
 
 def prisoner_guess(prisoners, evenorodd, prisoner_pos):
