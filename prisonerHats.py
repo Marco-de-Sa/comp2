@@ -51,9 +51,6 @@ def prisoner_guess(guesses, prisoners):
         hatCount = 0
     print(guesses)
 
-
-
-
 # 0 = black 1 = white
 prisoners = [randint(0,1) for i in range(5)]
 print(prisoners)
