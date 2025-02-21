@@ -70,4 +70,3 @@ prisoners = [randint(0,1) for i in range(int(input("how many prisoners are there
 print(prisoners)
 # calls the first_prisoner function
 first_prisoner(prisoners)
-#
