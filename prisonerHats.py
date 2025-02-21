@@ -19,16 +19,19 @@ def first_prisoner(prisoners):
 def prisoner_guess(guesses, prisoners):
     hatCount = 0
     isEven = 0
+    iterHat = 2
     if guesses[0] == "white":
         isEven = 0
     elif guesses[0] == "black":
         isEven = 1
 
-    for i in range(2, len(prisoners) - 1):
-        currentPos = 2
-        for j in range(currentPos, len(prisoners) - 1):
+    for i in range(len(prisoners) - iterHat):
+        for j in range(len(prisoners) - iterHat):
             if prisoners[j] == 1:
-                hatCount += 1
+                hatcount += 1
+            iterHat += 1
+        print(hatcount)
+        hatcount = 0
         if hatCount%2 == isEven:
             guesses.append("black")
             isEven = 0
