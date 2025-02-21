@@ -20,7 +20,7 @@ def first_prisoner(prisoners):
         guesses.append("grey")
     if hatCount % 2 == 1:
         guesses.append("black")
-    prisoner_guess(guesses, prisoners)
+    return prisoner_guess(guesses, prisoners)
 
 def prisoner_guess(guesses, prisoners):
     hatCount = 0
@@ -48,7 +48,7 @@ def prisoner_guess(guesses, prisoners):
             if len(guesses) == len(prisoners):
                 break
         hatCount = 0
-    print(guesses)
+    return guesses
 
 # 0 = black 1 = white 2 = grey
 # randomises the list of prisoners where 0 represents a black hat and 1 represents a white hat and 2 represents grey
@@ -56,5 +56,5 @@ prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there
 # prints the list of prisoners
 print(prisoners)
 # calls the first_prisoner function
-first_prisoner(prisoners)
+print(first_prisoner(prisoners))
 # testing
