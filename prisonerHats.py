@@ -27,13 +27,11 @@ def prisoner_guess(guesses, prisoners):
         isEven = 0
     elif guesses[0] == "black":
         isEven = 1
-    print(f"isEven: {isEven}")
     for i in range(len(prisoners)):
         for j in range(len(prisoners) - iterHat):
             if prisoners[j] == 1:
                 hatCount += 1
         iterHat += 1
-        print(hatCount)
         if hatCount%2 == isEven:
             whiteOrBlack = "black"
             guesses.append(whiteOrBlack)
@@ -52,6 +50,6 @@ def prisoner_guess(guesses, prisoners):
     print(guesses)
 
 # 0 = black 1 = white
-prisoners = [randint(0,1) for i in range(5)]
+prisoners = [randint(0,1) for i in range(int(input("how many prisoners are there: ")))]
 print(prisoners)
 first_prisoner(prisoners)
