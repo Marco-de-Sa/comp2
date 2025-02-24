@@ -4,16 +4,17 @@ def first_prisoner(prisoners):
     hatCount = 0
     guesses = []
 
-    # counts the amount of white hats infront of the last prisoner
-    for i in range(len(prisoners)-1):
+    # counts the amount of white hats infront of the second last prisoner
+    for i in range(len(prisoners)-2):
         if prisoners[i] == 1:
             hatCount += 1
     if hatCount % 2 == 0:
         guesses.append("white")
     if hatCount % 2 == 1:
         guesses.append("black")
-
-    for i in range(len(prisoners)-1):
+    
+    # counts the amount of grey hats infront of the second last prisoner
+    for i in range(len(prisoners)-2):
         if prisoners[i] == 2:
             hatCount += 1
     if hatCount % 2 == 0:
@@ -25,6 +26,7 @@ def first_prisoner(prisoners):
 def prisoner_guess(guesses, prisoners):
     hatCount = 0
     isEvenWhite = 0
+    isEvenGrey = 0
     iterHat = 2
     whiteOrBlackOrGrey = "white"
 
