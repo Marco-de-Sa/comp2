@@ -9,8 +9,13 @@ def count_down(num):
         print("num not positive")
 
 def sum_of(num):
-    return sum_of(num-1)+num
+    somVan = num
+    if somVan == 0:
+        return 0
+    else:
+        somVan += sum_of(num-1)
 
 n = int(input("input a number for the countdown"))
-count_down(n)
 print(sum_of(n))
+print()
+count_down(n)
