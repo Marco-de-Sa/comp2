@@ -94,8 +94,9 @@ def prisoner_guess(guesses, prisoners):
 # randomises the list of prisoners where 0 represents a black hat and 1 represents a white hat and 2 represents grey
 prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there: ")))]
 # prints the list of prisoners
+prisoners_string = ""
 for i in range(len(prisoners)):
-    print(prisoners[-(i+1)], end= "\t")
-print()
+    prisoners_string = f"{prisoners_string}, {prisoners[-(i+1)]}"
+print(f"[{prisoners_string[2:]}]")
 # calls the first_prisoner function
 print(first_two_prisoner(prisoners))
