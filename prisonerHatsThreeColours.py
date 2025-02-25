@@ -1,5 +1,8 @@
 from random import randint
 
+from prisonerHats import prisoners
+
+
 def first_two_prisoner(prisoners):
     hatCount = 0
     guesses = []
@@ -31,24 +34,32 @@ def prisoner_guess(guesses, prisoners):
     iterHat = 3
     whiteOrBlackOrGrey = "white"
 
+    # if the first guess is white it sets isEvenWhite to 0 and if not it sets it to 1
     if guesses[0] == "white":
         isEvenWhite = 0
     elif guesses[0] == "black":
         isEvenWhite = 1
 
+    # if the second guess is grey it sets isEvenGrey to 0 and if not it sets it to 1
     if guesses[1] == "grey":
         isEvenGrey = 0
     elif guesses[1] == "black":
         isEvenGrey = 1
 
-    for i in range(len(prisoners)):
+    # main loop for the prisoner hat counting algorithm
+    while True:
+        # counts the amount of white hats
         for j in range(len(prisoners) - iterHat):
             if prisoners[j] == 1:
                 hatCountWhite += 1
+        # counts the amount of grey hats
         for j in range(len(prisoners) - iterHat):
             if prisoners[j] == 2:
                 hatCountGrey += 1
+        # iterates the position by 1
         iterHat += 1
+        # checks for changes in the number of white or grey hats by comparing if they have
+        # changes in whether they are even or odd if no changes are detected black is guessed
         if hatCountWhite%2 == isEvenWhite and hatCountGrey%2 == isEvenGrey:
             whiteOrBlackOrGrey = "black"
             guesses.append(whiteOrBlackOrGrey)
@@ -64,23 +75,32 @@ def prisoner_guess(guesses, prisoners):
             if len(guesses) == len(prisoners):
                 break
         else:
+            # sets the guess to white
             whiteOrBlackOrGrey = "white"
+            # appends the whiteOrBlackOrGrey to the guess list
             guesses.append(whiteOrBlackOrGrey)
+            # following if else statement switches the isEven values from 1 to 0 and 0 to 1
             if isEvenWhite == 0:
                 isEvenWhite = 1
             else:
                 isEvenWhite = 0
+            # detects if the guess limit is reached and then breaks out of the for loop
             if len(guesses) == len(prisoners):
                 break
+        # resets the counters for both the white and the black hats
         hatCountWhite = 0
         hatCountGrey = 0
+    # returns the array of guesses
     return guesses
 
 # 0 = black 1 = white 2 = grey
 # randomises the list of prisoners where 0 represents a black hat and 1 represents a white hat and 2 represents grey
-prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there: ")))]
+# prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there: ")))]
 # prints the list of prisoners
-print(prisoners)
+prisoners = [2, 1, 1, 2, 1, 0, 1, 2, 2]
+for i in range(len(prisoners)):
+    print(prisoners[-(i+1)], end= "\t")
+print()
 # calls the first_prisoner function
 print(first_two_prisoner(prisoners))
 # testing
