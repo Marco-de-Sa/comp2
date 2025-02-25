@@ -1,6 +1,6 @@
 from random import randint
 
-def first_prisoner(prisoners):
+def first_two_prisoner(prisoners):
     hatCount = 0
     guesses = []
 
@@ -30,6 +30,16 @@ def prisoner_guess(guesses, prisoners):
     isEvenGrey = 0
     iterHat = 2
     whiteOrBlackOrGrey = "white"
+
+    if guesses[0] == "white":
+        isEvenWhite = 0
+    elif guesses[0] == "black":
+        isEvenWhite = 1
+
+    if guesses[1] == "white":
+        isEvenGrey = 0
+    elif guesses[1] == "black":
+        isEvenGrey = 1
 
     for i in range(len(prisoners)):
         for j in range(len(prisoners) - iterHat):
@@ -71,5 +81,5 @@ prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there
 # prints the list of prisoners
 print(prisoners)
 # calls the first_prisoner function
-print(first_prisoner(prisoners))
+print(first_two_prisoner(prisoners))
 # testing
