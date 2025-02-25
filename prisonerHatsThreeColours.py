@@ -35,10 +35,22 @@ def prisoner_guess(guesses, prisoners):
         for j in range(len(prisoners) - iterHat):
             if prisoners[j] == 1:
                 hatCountWhite += 1
+        for j in range(len(prisoners) - iterHat):
+            if prisoners[j] == 1:
+                hatCountGrey += 1
         iterHat += 1
-        if hatCountWhite%2 == isEvenWhite:
+        if hatCountWhite%2 == isEvenWhite and hatCountGrey%2 == isEvenGrey:
             whiteOrBlackOrGrey = "black"
             guesses.append(whiteOrBlackOrGrey)
+            if len(guesses) == len(prisoners):
+                break
+        elif hatCountGrey%2 != isEvenGrey:
+            whiteOrBlackOrGrey = "grey"
+            guesses.append(whiteOrBlackOrGrey)
+            if isEvenGrey == 0:
+                isEvenGrey = 1
+            else:
+                isEvenGrey = 0
             if len(guesses) == len(prisoners):
                 break
         else:
