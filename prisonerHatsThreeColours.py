@@ -1,8 +1,5 @@
 from random import randint
 
-from prisonerHats import prisoners
-
-
 def first_two_prisoner(prisoners):
     hatCount = 0
     guesses = []
@@ -102,4 +99,3 @@ for i in range(len(prisoners)):
 print()
 # calls the first_prisoner function
 print(first_two_prisoner(prisoners))
-# testing
