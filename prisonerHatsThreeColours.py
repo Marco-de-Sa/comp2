@@ -15,7 +15,7 @@ def first_two_prisoner(prisoners):
         guesses.append("white")
     if hatCount % 2 == 1:
         guesses.append("black")
-    
+    hatCount = 0
     # counts the amount of grey hats infront of the second last prisoner
     for i in range(len(prisoners)-2):
         if prisoners[i] == 2:
@@ -95,9 +95,8 @@ def prisoner_guess(guesses, prisoners):
 
 # 0 = black 1 = white 2 = grey
 # randomises the list of prisoners where 0 represents a black hat and 1 represents a white hat and 2 represents grey
-# prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there: ")))]
+prisoners = [randint(0,2) for i in range(int(input("how many prisoners are there: ")))]
 # prints the list of prisoners
-prisoners = [2, 1, 1, 2, 1, 0, 1, 2, 2]
 for i in range(len(prisoners)):
     print(prisoners[-(i+1)], end= "\t")
 print()
