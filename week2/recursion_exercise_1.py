@@ -23,9 +23,13 @@ def power_of(a, b):
     num *= power_of(num, power-1)
     return num
 
+def reverse(r_str):
+    temp = r_str
+
+
 n = int(input("input a number for the countdown"))
 print(sum_of(n))
 print()
 count_down(n)
 
-print(power_of(2, 3))
+print(power_of(4, 2))
