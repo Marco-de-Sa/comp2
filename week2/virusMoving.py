@@ -19,7 +19,7 @@ def lab_sorting(n, a, c, b):
     if len(a) > 1:
         c.append(a.pop())
         # writes a placeholder text to the text file recording this move as a line
-        file.write(f"a\n")
+        file.write("a\n")
     # shifts labs in arrays
     lab_sorting(n - 1, b, c, a)
 
