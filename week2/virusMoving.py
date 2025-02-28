@@ -22,20 +22,26 @@ def lab_sorting(n, a, c, b):
         file.write("a\n")
     # shifts labs in arrays
     lab_sorting(n - 1, b, c, a)
-
+# sets the n to the length of the lab_a array
 n = len(lab_a)
+# calls the lab_srting function
 lab_sorting(n, lab_a, lab_b, lab_c)
 
 # opens the file in r so the amount of lines can be read
 file = open("count.txt", 'r')
+
 # reads the amount of lines in the text file and assigns it to the lines variable
 lines = len(file.readlines())
+
 # prints out the amount of attempts to the command prompt
 print('the amount of attempts are:', lines)
+
 # opens the file in w so we can use the truncate command
 file = open("count.txt", 'w')
+
 # truncates the file to 0
 file.truncate()
+
 # closes the file
 file.close()
 
