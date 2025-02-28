@@ -39,9 +39,9 @@ file.truncate()
 # closes the file
 file.close()
 
+
+
 # non array version below
-
-
 def lab_sorter(n, a, c, b):
     if n == 1:
         print("Move virus 1 from lab", a, "to lab", c)
