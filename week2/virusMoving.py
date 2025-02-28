@@ -9,6 +9,7 @@ def lab_sorting(n, a, c, b):
     if n == 1:
         # Move virus 1 from array a to c
         if len(a) > 1:
+            # takes the top virus in the lab of list a and puts it in list a
             c.append(a.pop())
             # writes a placeholder text to the text file recording this move as a line
             file.write("a\n")
@@ -17,6 +18,7 @@ def lab_sorting(n, a, c, b):
     lab_sorting(n - 1, a, b, c)
     # Move virus n from array a to c
     if len(a) > 1:
+        # takes the top virus in the lab of list a and puts it in list a
         c.append(a.pop())
         # writes a placeholder text to the text file recording this move as a line
         file.write("a\n")
