@@ -35,8 +35,8 @@ file = open("count.txt", 'r')
 # reads the amount of lines in the text file and assigns it to the lines variable
 lines = len(file.readlines())
 
-# prints out the amount of attempts to the command prompt
-print('the amount of attempts are:', lines)
+# prints out the amount of movements to the command prompt
+print('the amount of movements were:', lines)
 
 # opens the file in w so we can use the truncate command
 file = open("count.txt", 'w')
