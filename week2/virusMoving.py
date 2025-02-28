@@ -49,7 +49,7 @@ file.close()
 
 
 
-# non array version below
+# instruction form of the problem
 def lab_sorter(n, a, c, b):
     if n == 1:
         print("Move virus 1 from lab", a, "to lab", c)
