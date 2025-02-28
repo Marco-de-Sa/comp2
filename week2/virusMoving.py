@@ -56,5 +56,4 @@ def lab_sorter(n, a, c, b):
     print("Move virus", n, "from lab", a, "to lab", c)
     lab_sorter(n - 1, b, c, a)
 
-n = 5
 lab_sorter(n, 'A', 'B', 'C')
