@@ -1,4 +1,4 @@
-lab_a = ["lab A","v5","v4","v3","v2","v1"]
+lab_a = ["lab A","v6","v5","v4","v3","v2","v1"]
 lab_b = ["lab B"]
 lab_c = ["lab C"]
 
@@ -26,7 +26,7 @@ def lab_sorting(n, a, c, b):
     lab_sorting(n - 1, b, c, a)
 # sets the n to the length of the lab_a array
 n = len(lab_a)
-# calls the lab_srting function
+# calls the lab_sorting function
 lab_sorting(n, lab_a, lab_b, lab_c)
 
 # opens the file in r so the amount of lines can be read
