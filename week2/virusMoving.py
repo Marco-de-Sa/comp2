@@ -47,7 +47,9 @@ file.truncate()
 # closes the file
 file.close()
 
-
+"""
+test
+"""
 
 # instruction form of the problem
 def lab_sorter(n, a, c, b):
