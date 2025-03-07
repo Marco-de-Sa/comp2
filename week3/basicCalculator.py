@@ -15,7 +15,7 @@ except ValueError:
     print("thanks for using this calculator")
     exit()
 
-s = input("input operator(+, -, *, /")
+s = input("input operator(+, -, *, /): ")
 if s.strip() == "+":
     print(f"{a}+{b} = {a+b}")
 elif s.strip() == "-":
