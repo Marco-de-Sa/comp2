@@ -1,11 +1,11 @@
 def letter_counter(s):
     ld = {}
     for i in range(len(s)):
-        if s[i].lower() not in ld:
-            ld[s[i].lower()] = 1
+        if s[i] not in ld:
+            ld[s[i]] = 1
         else:
-            ld[s[i].lower()] = ld[s[i].lower()] + 1
+            ld[s[i]] = ld[s[i]] + 1
     return ld
 w = input("Gimme a word: ")
-letterDict = letter_counter(w)
+letterDict = letter_counter(w.lower())
 print(letterDict)

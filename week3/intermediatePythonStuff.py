@@ -21,9 +21,9 @@ student_grades ["Alice"] = 88 # Updates Alice ’s value
 
 # Looping through keys ( student names )
 print ("Student names : ")
-for name in student_grades . keys ():
+for name in student_grades.keys ():
     print(name)
     # Looping through values ( grades )
 print ("\nStudent grades: ")
-for grade in student_grades . values ():
-    print ( grade )
+for grade in student_grades.values ():
+    print (grade)
