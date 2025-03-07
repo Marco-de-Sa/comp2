@@ -17,14 +17,14 @@ except ValueError:
 
 s = input("input operator(+, -, *, /")
 if s.strip() == "+":
-    print(a+b)
+    print(f"{a}+{b} = {a+b}")
 elif s.strip() == "-":
-    print(a-b)
+    print(f"{a}-{b} = {a-b}")
 elif s.strip() == "*":
-    print(a*b)
+    print(f"{a}*{b} = {a*b}")
 elif s.strip() == "/":
     try:
-        print(a/b)
+        print(f"{a}/{b} = {a/b}")
     except ZeroDivisionError:
         print("Cannot divide by zero!")
 print("thanks for using this calculator")
