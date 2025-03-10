@@ -1,4 +1,4 @@
-lab_a = ["lab A","v6","v5","v4","v3","v2","v1"]
+lab_a = ["lab A","v5","v4","v3","v2","v1"]
 lab_b = ["lab B"]
 lab_c = ["lab C"]
 
@@ -29,7 +29,10 @@ n = len(lab_a)
 # calls the lab_sorting function
 lab_sorting(n, lab_a, lab_b, lab_c)
 
-# opens the file in r so the amount of lines can be read
+# closes the file in w mode
+file.close()
+
+# reopens the file in r so the amount of lines can be read
 file = open("count.txt", 'r')
 
 # reads the amount of lines in the text file and assigns it to the lines variable
