@@ -1,13 +1,12 @@
-def fib(n, s):
-    if len(s) == 0:
-        s.append(1)
-        s.append(2)
-        fib(n-1, s)
-        print(s)
-    else:
-        s.append(s[n] + s[n-1])
-        fib(n-1, s)
+def fib(n, s, sn):
+    if sn == n-2:
+        return s[2:]
+    s.append(s[sn] + s[sn+1])
+    s = fib(n, s, sn+1)
+    return s
+    # print(s[2:])
 
 numbers = int(input("till what n is the fib sequence"))
-start = []
-fib(numbers, start)
+sNum = 0
+start = [1, 1]
+print(fib(numbers, start, sNum))
