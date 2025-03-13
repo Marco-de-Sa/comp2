@@ -2,6 +2,13 @@
 def print_elements(lst):
     for element in lst:
         print(element)
+"""
+input: ["a", "b", "c"]
+output:
+a
+b
+c
+"""
 
 # While this one executes n^2 prints
 def print_all_pairs(lst):
@@ -9,7 +16,7 @@ def print_all_pairs(lst):
         for j in lst :
             print(i , j)
 """
-input: [a, b, c]
+input: ["a", "b", "c"]
 output:
 a a
 a b 
