@@ -12,7 +12,7 @@ def lab_sorting(n, a, c, b):
             # takes the top virus in the lab of list a and puts it in list a
             c.append(a.pop())
             # writes a placeholder text to the text file recording this move as a line
-            file.write("a\n")
+            file.write("a")
         return
     # switches labs in array b and c
     lab_sorting(n - 1, a, b, c)
