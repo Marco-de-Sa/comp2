@@ -16,7 +16,7 @@ def insertion_sort(arr):
     print(f"swapped: {cs}")
     print(arr)
 
-A = [randint(0,10) for i in range(10)]
+A = [randint(0,10) for i in range(20)]
 print(A)
 
 insertion_sort(A)
