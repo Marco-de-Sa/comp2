@@ -1,10 +1,12 @@
+import random
+
 def binary_search_with_in(arr, target):
     """
-    Perform a binary search using the 'in' operator to check halves of the list.
+    Performs a binary search using the 'in' operator to check halves of the list.
 
-    :param arr: List of elements
-    :param target: Element to search for
-    :return: Index of the target element if found, otherwise -1
+    param arr: List of elements
+    param target: Element to search for
+    return: Index of the target element if found, otherwise -1
     """
     left, right = 0, len(arr) - 1
 
@@ -26,10 +28,6 @@ def binary_search_with_in(arr, target):
             return left
 
     return -1
-
-
-# Example usage
-import random
 
 # Initialize the list
 arr = [0, 0, 0, 0, 0, 0, 0]
