@@ -1,5 +1,4 @@
 class Book:
-    position = 0
     def __init__(self, title, author, pages, release_date, position = 0):
         self.title = title
         self.author = author
