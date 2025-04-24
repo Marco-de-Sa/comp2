@@ -32,19 +32,18 @@ class GameDeck:
 
     def sort_deck(self):
         # wip do not use
-        cc = 0
-        cs = 0
-        for i in range(1, len(self.deck)):
-            for j in range(i):
-                if self.deck[i].split(" ")[0] < self.deck[j].split(" ")[0]:
-                    temp = self.deck[i]
-                    self.deck[i] = self.deck[j]
-                    self.deck[j] = temp
-                    cs += 1
+        tempDeck = []
+        for i in range(2, 11): # to sort card numbers
+            count = 0
+            for j in range(len(self.deck)-1):# to get iterate through the deck
+                if self.deck[j].split(' ')[0] == str(i):
+                    tempDeck.append(self.deck.pop(j))
+                    count+=1
+                    j-=1
+                if count == 4:
+                    count = 0
                     continue
-                cc += 1
-        print(f"checked: {cc}")
-        print(f"swapped: {cs}")
+        self.deck = tempDeck
 
     def shuffle(self):
         temp = ""
@@ -54,18 +53,18 @@ class GameDeck:
             self.deck[ind1] = self.deck[ind2]
             self.deck[ind2] = temp
 
-    def to_string(self):
+    def __str__(self):
         return f"{self.deck}"
 
 my_hand = GameDeck()
 my_hand.count_suit("hearts")
-print(my_hand.to_string())
+print(my_hand.__str__())
 my_hand.shuffle()
-print(my_hand.to_string())
+print(my_hand.__str__())
 tem = my_hand.deal_cards(4)
 print(tem)
-print(my_hand.to_string())
+print(my_hand.__str__())
 my_hand.rejoin(tem)
-print(my_hand.to_string())
-# my_hand.sort_deck()
-# print(my_hand.to_string())
+print(my_hand.__str__())
+my_hand.sort_deck()
+print(my_hand.__str__())
