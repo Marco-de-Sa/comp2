@@ -1,10 +1,10 @@
 from random import randint
 
 class GameDeck:
-    def __init__(self, deck = []):
+    def __init__(self):
         spCard = {1: "ace", 2: "jack", 3: "queen", 4: "king"}
         suit = {1: "clubs", 2: "spades", 3: "hearts", 4: "diamonds"}
-        deck = [f"ace {suit[i]}" for i in range(1, 5)]
+        deck = [f"{spCard[1]} {suit[i]}" for i in range(1, 5)]
         for i in range(2, 11):
             for j in range(1, 5):
                 deck.append(f"{i} {suit[j]}")
