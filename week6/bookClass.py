@@ -1,10 +1,10 @@
 class Book:
-    def __init__(self, title, author, pages, release_date, position = 0):
+    def __init__(self, title, author, pages, release_date):
         self.title = title
         self.author = author
         self.pages = pages
         self.release_date = release_date
-        self.position = position
+        self.position = 0
 
     def print_summary(self):
         return f"Title: {self.title}, Author: {self.author}, Pages: {self.pages} Release date: {self.release_date}, Current page: {self.position}"
