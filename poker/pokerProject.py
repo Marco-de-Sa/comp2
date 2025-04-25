@@ -4,6 +4,23 @@ from random import randint
 # todo add a way to count how many times specific hands have been encountered
 
 class GameDeck:
+    """
+    This is the class that handles all operations that the deck of cards will need to undertake.
+    The code that handles the hand of the player will most likely be in a different area.
+    A brief description of the methods:
+
+    __init__: will be automatically used on a new object of this class being made
+    count_suit: counts the number of cards belonging to a specific suit that remain in the deck
+    rejoin: will take a list of cards provided by the player and rejoin them into the deck
+    deal_cards: deals out the specified number of cards in list form
+    sort_deck: is at the moment non-functional, but it is planned to have a way for the player to
+            select what sorting method will be used
+    shuffle: self-explanatory, it will shuffle the cards remaining in the deck by switching 2
+            random indexes 1000 times
+    to_string: I am not sure if this name is in line with python naming practices with this sort
+            of method, but basically it takes the deck of cards(list) and transforms it into a string
+            which is returned
+    """
     def __init__(self):
         spCard = {1: "ace", 2: "jack", 3: "queen", 4: "king"}
         suit = {1: "clubs", 2: "spades", 3: "hearts", 4: "diamonds"}
@@ -38,6 +55,7 @@ class GameDeck:
 
     def sort_deck(self):
         # wip not ready for use(will work if used however just not in it's final state)
+        # possible solution is to get every suit into it's own list and sort them by their numbers and then rejoin them in a specific order
         # todo add a method to sort the cards by suit and not just number
         # todo allow add new methods of sorting from what we have learned so far and let the user choose between them
         tempDeck = []
