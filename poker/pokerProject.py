@@ -26,19 +26,20 @@ class GameDeck:
         print(f"There are {temp} cards belonging to {target} remaining in the deck")
 
     def rejoin(self, hand):
-        for i in range(len(hand)):
-            self.deck.append(hand.pop())
+        for i in range(len(hand)): # takes the iterates through the hand indexes
+            self.deck.append(hand.pop()) # pops each hand value into the deck
 
     def deal_cards(self, card_count):
         # todo add a way to sort cards before handing them out
-        temp = []
-        for i in range(int(card_count)):
-            temp.append(self.deck.pop())
-        return temp
+        temp = [] # creates a temporary list
+        for i in range(int(card_count)): # converts car_count to an integer and then iterates throughout it
+            temp.append(self.deck.pop()) # appends the specified amount(from card_count) to the temp list by popping them from the deck
+        return temp # returns the temp list
 
     def sort_deck(self):
-        # wip do not use
-        # todo add a method to sort the cards by suit and number
+        # wip not ready for use(will work if used however just not in it's final state)
+        # todo add a method to sort the cards by suit and not just number
+        # todo allow add new methods of sorting from what we have learned so far and let the user choose between them
         tempDeck = []
         for i in range(len(self.deck)):
             if self.deck[i].split(' ')[0] == "ace":
@@ -57,24 +58,17 @@ class GameDeck:
 
     def shuffle(self):
         temp = ""
-        for i in range(1000):
-            ind1, ind2 = randint(0,51), randint(0,51)
+        for i in range(1000): # iterates the code 1000 times
+            ind1, ind2 = randint(0,51), randint(0,51) # randomly generates two indexes that will be swapped later
+            # below swaps the two random indexes of the deck variable
             temp = self.deck[ind1]
             self.deck[ind1] = self.deck[ind2]
             self.deck[ind2] = temp
 
     def to_string(self):
-        return f"{self.deck}"
+        return f"{self.deck}" # returns the deck as a string
 
-my_hand = GameDeck()
-my_hand.count_suit("hearts")
-print(my_hand.to_string())
-my_hand.shuffle()
-print(my_hand.to_string())
-tem = my_hand.deal_cards(4)
-print(tem)
-print(my_hand.to_string())
-my_hand.rejoin(tem)
-print(my_hand.to_string())
+my_hand = GameDeck() # makes a new object of the GameDeck class
+
 my_hand.sort_deck()
 print(my_hand.to_string())
