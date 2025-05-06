@@ -1,1 +1,1 @@
-# this has been moved to the pokerProj repo
+# this has been moved to the pokerProj repo since some people in class seem to be stealing my code :)
